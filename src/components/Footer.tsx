@@ -1,4 +1,5 @@
-﻿import { footerColumns } from '../data/content'
+﻿import { Link } from 'react-router-dom'
+import { footerColumns } from '../data/content'
 
 export default function Footer() {
   return (
@@ -11,7 +12,11 @@ export default function Footer() {
               <ul>
                 {col.links.map((link) => (
                   <li key={link}>
-                    <a href={link === 'Book a Demo' ? '/get-started' : '#'}>{link}</a>
+                    {link === 'Book a Demo' ? (
+                      <Link to="/get-started">{link}</Link>
+                    ) : (
+                      <a href="#">{link}</a>
+                    )}
                   </li>
                 ))}
               </ul>

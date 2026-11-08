@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { plans } from '../data/content'
 
 export default function Pricing() {
@@ -27,9 +28,9 @@ export default function Pricing() {
                   <li key={f}>{f}</li>
                 ))}
               </ul>
-              <a className={`btn ${plan.featured ? 'btn-primary' : 'btn-dark'}`} href="/get-started">
+              <Link className={`btn ${plan.featured ? 'btn-primary' : 'btn-dark'}`} to="/get-started">
                 {plan.featured ? 'Book a Demo' : 'Contact Us'}
-              </a>
+              </Link>
             </article>
           ))}
         </div>

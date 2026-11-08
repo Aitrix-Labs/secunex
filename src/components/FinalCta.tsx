@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ASSETS } from '../data/content'
 
 export default function FinalCta() {
@@ -20,12 +21,12 @@ export default function FinalCta() {
             <p className="final-cta-lead">
               Accelerate your business and product. Leave the busywork to us.
             </p>
-            <a className="btn btn-primary btn-with-arrow" href="/get-started">
+            <Link className="btn btn-primary btn-with-arrow" to="/get-started">
               Book a Demo
               <span className="btn-arrow" aria-hidden>
                 <img src={ASSETS.arrowUp} alt="" />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

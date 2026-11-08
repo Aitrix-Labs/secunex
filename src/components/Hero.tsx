@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ASSETS, heroRotating, mountainPins } from '../data/content'
 
 export default function Hero() {
@@ -44,12 +45,12 @@ export default function Hero() {
           />
         </p>
         <div className="hero-ctas">
-          <a className="btn btn-primary btn-with-arrow" href="/get-started">
+          <Link className="btn btn-primary btn-with-arrow" to="/get-started">
             Get a Demo
             <span className="btn-arrow" aria-hidden>
               <img src={ASSETS.arrowUp} alt="" />
             </span>
-          </a>
+          </Link>
           <a className="btn btn-outline" href="#case-studies">
             Case Studies
           </a>
